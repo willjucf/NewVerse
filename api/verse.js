@@ -1,5 +1,10 @@
-import Database from 'better-sqlite3';
-const db = new Database('./database/verses.db');
+import path from "path";
+import Database from "better-sqlite3";
+
+// Build an absolute path (so Vercel can find the DB)
+const dbPath = path.join(process.cwd(), "database", "verses.db");
+const db = new Database(dbPath);
+
 
 export default function handler(req, res) {
   const { book, chapter, verse, version } = req.query;
