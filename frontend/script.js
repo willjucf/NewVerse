@@ -130,15 +130,15 @@ async function fetchVerse() {
   const res = await fetch(`/api/verse${query}`);
   const data = await res.json();
 
-  if (data && data.text) {
-    verseBox.innerHTML = `${prettifyName(data.book)} ${data.chapter}:${data.verse} — ${data.text}
-      <br><button onclick="openPassage()">Open Passage</button>`;
-    currentVerse = data;
-    passageDisplay.style.display = 'none';
-  } else {
-    verseBox.textContent = 'Verse not found.';
-    currentVerse = null;
-  }
+if (data && data.text) {
+  verseBox.innerHTML = `${prettifyName(data.book)} ${data.chapter}:${data.verse} — ${data.text}`;
+  currentVerse = data;
+  passageDisplay.style.display = 'none';
+} else {
+  verseBox.textContent = 'Verse not found.';
+  currentVerse = null;
+}
+
 }
 
 // ---------- Passage view ----------
