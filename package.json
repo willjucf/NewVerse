@@ -1,0 +1,8 @@
+{
+  "name": "newverse",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^9.4.1"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.min.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>NewVerse</title>
+    <link rel="stylesheet" href="styles.min.css">
+</head>
+<body>
+  <!-- sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>Books</h2>
+    </div>
+
+<div class="button-group top-buttons">
+  <button onclick="selectAllBooks()">Select All</button>
+  <button onclick="clearBooks()">Clear</button>
+</div>
+
+<div class="sort-button">
+  <button id="sort-button" onclick="toggleSort()">Sort: Alphabetical</button>
+</div>
+
+    <div id="book-list" class="book-list"></div>
+  </div>
+
+  <!-- arrow toggle button -->
+  <button id="toggle-sidebar" onclick="toggleSidebar()"></button>
+
+  <!-- main verse container -->
+  <div class="container">
+    <h1>NewVerse</h1>
+    <div id="verse-box">Loading verse...</div>
+    <div class="controls">
+      <button onclick="fetchVerse()">New Verse</button>
+      <button onclick="openPassage()">Open Passage</button>
+    </div>
+    <div id="passage-display" style="display:none"></div>
+  </div>
+</body>
+</html>
